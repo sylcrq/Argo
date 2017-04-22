@@ -21,6 +21,7 @@ public class JavaScriptModuleRegistry {
 
         @Override
         public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+            //当proxy对象的方法被调用时，invoke被调用
             System.out.print("Hi " + method.getName() + " [");
             for (Object obj : args) {
                 System.out.print(obj);
